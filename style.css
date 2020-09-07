@@ -8,6 +8,11 @@ body {
   color: rgb(158, 147, 147);
   background: #250008;
 }
+
+.containerAnimate {
+  padding: 20% 0 5%;
+}
+.container{max-width: 65%;}
 .row{margin: 0;}
 /* NAVBAR */
 nav{background-color: #000;}
@@ -36,6 +41,7 @@ nav img{ margin: 1%;}
     transform: translate((-300px, 0) scale(0));
     animation: animate 3s forwards;
     display:inline-block;
+    margin-left: 35px;
   }
   .text-area span:nth-of-type(2){
     animation-delay: .1s;
@@ -48,7 +54,7 @@ nav img{ margin: 1%;}
   }.text-area span:nth-of-type(6){
     animation-delay: .5s;
   }
-  
+
   @keyframes animate{
     60%{
       transform:translate(20px, 0 scale(1));
@@ -57,12 +63,10 @@ nav img{ margin: 1%;}
     80%{
       transform:translate(20px, 0 scale(1));
       color: #fff;
-  
     }
     90%{
       transform:translate(0) scale(1.2);
       color: #BD861F;
-  
     }
     100%{
       transform:translate(0) scale(1);
@@ -70,14 +74,12 @@ nav img{ margin: 1%;}
       opacity: 1;
     }
   }
-  
+
   hr {
     border-bottom: 5px solid #ccc;
     position: relative;
   }
-  .container {
-    padding:20% 0 5%;
-  }
+
   .box {
     height: 100px;
     width: 250px;
@@ -130,25 +132,12 @@ nav img{ margin: 1%;}
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ABOUT US */
 #about, #products, #certifications, #biz{    margin: 7%;}
 #about h1, #products h1, #certifications h1, #biz h1{margin-bottom: 3.5rem;}
 
 
-/* OUR PRODUCTS */
+/* OUR BUSINESES */
 
 #biz .row{margin: auto;}
 .card {
@@ -238,7 +227,7 @@ margin: auto  ;
     bottom: 0;
     right: 0;
     position: absolute;
-    z-index: -1;   
+    z-index: -1;
   }
 
 #clients img{
@@ -256,91 +245,256 @@ margin: auto  ;
     border-radius: 1.5rem;
 }
 
-/* FOOTER */
 #footer{
-    padding: 100px;
-    color: #fff;
-    }
-
-.footRow{
-    margin-top: 20px;
-    margin-left: 40px;
-}
-#footer ul{margin: 0;}
-#footer li{list-style: none; }
-#footer a{color: #fff;}
-.col-md-1{
-    position: absolute;
-}
-span{
-    margin-left: 35px;
+  margin: 7% 0 0;
+  padding: 3rem;
+  color: #fff;
+  background-image: url(images/footer-bg.jpg);
 }
 
+.footNav a{
+  color: rgba(212, 154, 154, 0.5);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+.footNav a:hover{ color: #fff;}
+.footLink{  margin: 0 2rem;}
+.footLogo{
+  width: max-content;
+    padding: 10px;
+}
+#footer span{margin-left: 10px;}
 .soc{
-    margin: 0 7px;
-    color: #fff;
+  width: 43px;
+  height: 43px;
+  font-size: 18px;
+  line-height: 2.5;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  background-color: #dd3d53;
+  border-radius: 50%;
+  margin: 0.3rem;
 }
+
+  /* CONTACT US */
+
+.wrapper1{
+  background-image: url(images/contact-bg.jpg);
+  padding: 2% 0;
+  text-align: center;
+}
+
+#contact{
+  background-image: url(images/world-bg.png);
+  background-repeat: repeat-x;
+  padding: 2% 0 5%;
+  background-origin: content-box;
+
+}
+#contact h1{
+  font-size: 6rem;
+  text-align: center;
+  opacity: 0.4;
+}
+
+.conDetails{
+  background-color: #fcf9d1;
+   padding: 2rem;
+   border-radius: 0.7rem;
+  }
+.addBox .icon{
+  float: right !important;
+  margin-top: 2rem;
+  font-size: 1.1rem;
+}
+
+/* PRODUCTS */
+
+.maintabs{
+  display: flex;
+  flex-wrap: wrap;
+  /* max-width: 600px; */
+  margin-top: 50px auto;
+  padding: 25px;
+}
+
+.maintabs input[type='radio']{
+  display: none;
+}
+.maintabs label{
+  padding: 25px;
+  background: #e2e2e2;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  /* order: 2; */
+}
+
+.maintabs .tab{
+  width: 100%;
+  padding: 20px;
+  background-color: #fff;
+  order: 1;
+  display: none;
+}
+.tab p, .tab ol{
+  line-height: 2.3rem;
+  padding:0 2rem;
+}
+
+.maintabs .tab h2{
+  font-size: 3rem;
+  padding-top: 5rem;
+}
+.maintabs input[type='radio']:checked + label + .tab{
+  display: block;
+}
+.maintabs input[type='radio']:checked + label{
+  background: #fff;
+}
+.proImg{
+  height: 400px;
+  width: 400px;
+}
+
+/* ABOUT US */
+
+ .container__image {
+	 position: relative;
+	 flex-direction: column;
+	 justify-content: center;
+	 width: 400px;
+	 height:400px;
+	 border-radius: 50%;
+	 background-image: url('images/abt-img.jpg');
+	 background-size: cover;
+	 transition: ease-in-out 0.3s;
+	 z-index: 2;
+}
+ .container__image:before {
+	 content: ' ';
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 bottom: 0;
+	 left: 0;
+	 margin: auto;
+	 background: inherit;
+	 background-position: bottom;
+	 filter: blur(40px) saturate(0%);
+	 transform: scaleX(0.4);
+	 transition: ease-in-out 0.4s;
+	 border-radius: 120px;
+	 transform-origin: right;
+	 opacity: 0;
+	 z-index: -1;
+}
+
+ .container__image .container__location {
+	 transition-delay: 0.15s;
+}
+ .container__image:hover {
+	 border-radius: 0;
+	 width: 500px;
+	 height: 410px;
+	 box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
+}
+ .container__image:hover:before {
+	 width: 100%;
+	 opacity: 0.18;
+	 filter: blur(10px) saturate(100%);
+	 transform: scale(2.8) translate3d(-18%, 0px, 0px);
+}
+
+.abtBox{padding: 4rem 0;}
+
+#goal{background-color: #fff; padding: 3rem 0;}
+#goal img:hover{
+  transform: translateY(-20px);
+  transition: 0.8s;
+}
+#goal p{line-height: 2rem ;}
+
+.chairmanMsg{text-align: center; padding: 5rem 0;}
+.chairmanMsg h2{margin-bottom: 2rem;}
+.chairmanMsg img{ border-radius: 50%; margin: 2rem;}
+.chairmanMsg p{line-height: 2rem;}
+
+
+
+
 
 /* MEDIA QUERY */
 @media(max-width:400px){
   *{text-align: center;}
-  #hero .text-area{font-size: 3rem;}
+  #hero .text-area, #contact h1{font-size: 3rem;}
   #hero span{margin-left: 25px;}
   .box{height: 79px;  width: 150px;}
   .circle1{left: 16px;}
   .circle2{right: 12px;}
-  @keyframes slidein {
-    from {
-      left: 0%;
-    }
-    to {
-      left: 52%;
-    }
-  }
-  .wrapper h2{margin-top: 2rem;font-size: 1.2rem;}
+  @keyframes slidein {    from {      left: 0%;    }    to {      left: 52%;    }  }
+  .wrapper h2, .wrapper1 h1 {margin-top: 2rem;font-size: 1.2rem;}
+  .conDetails h5, #footer h5{font-size: 1.2rem;}
+  .conDetails h2, .conDetails h4{margin-top: 2rem;font-size: 1.9rem;}
   span{margin: 0;}
   #about, #products, #certifications, #biz {margin: 30% 0;}
   #about h1, #products h1, #certifications h1, #biz h1{font-size: 2.3rem;margin-bottom: 2.5rem;}
   #about h6{font-size: 1rem;  margin-bottom: 2rem;}
-  #about p, #clients p{font-size: 0.8rem;}
+  #about p, #clients p, .conDetails p, #footer span, #footer p,.tab p,.tab ol, .abtBox p, #goal p, .chairmanMsg p {font-size: 0.8rem;}
   .fa-3x{font-size: 30px;}
   #biz h2{font-size: 1.5rem;}
   .card .image img {  width: 350px;  height: 201px;}
   .card{margin: 10px 0;}
   .certCol{padding: 5%;}
   .testimonial{padding: 30px 10px;}
-  #footer{padding: 0;}
-  .footRow .col-md-1{text-align: left;}
-  .footRow span{margin-left: 20px;}
-  #footer li{margin: 15px 0;}
-  #footer ul{ margin: 30px 0;}
-  #footer .fa-1x{margin: 10px 15px 5px;}
   .owl-carousel{margin-top: 40px;}
-
+  .container{max-width: 100%; padding: 5px;}
+  .conDetails{padding:10px 0;}
+  .addBox .icon {    float: inherit;    margin-top: 1.5rem;    font-size: 1rem;}
+  .conDetails .form-group{margin: 0; }
+  .conDetails .form-control, .footNav a{font-size: 0.8rem;}
+  .conDetails .btn-lg{line-height: 0.5; margin-top: 1rem;font-size: 0.8rem;}
+  #footer{padding: 0;}
+  #footer .navbar, .maintabs{padding: 0.5rem 0;}
+  .footNav a{font-weight: 500;}
+  .footLink {    margin: 0.5rem;}
+  .footLogo img{ height: 70px;}
+  .abtBox{padding: 2rem 0;}
+  .abtBox h5{font-size: 1.1rem;}
+  .chairmanMsg h2{font-size: 1.5rem; margin-top: 3rem;}
+  .chairmanMsg img{margin: 0 0 2rem;}
+  .container__image{width: 200px; height: 200px;margin: 0 auto 40px;}
+   .container__image:hover {	 border-radius: 0;	 width: 250px;	 height: 250px; }
+.maintabs label{padding: 0.2rem;}
+.proImg{height: 100px; width: 100px;}
+.maintabs .tab h2{padding: 0; font-size: 1.8rem;}
+.maintabs .tab p{padding: 1rem 5px;line-height: 1.5rem;}
+.tab ol{ line-height: 1.4rem;}
 }
 
 
+
+
   @media(max-width:780px) and (min-width:402px){
+
     *{text-align: center;}
-    #hero .text-area{font-size: 3.5rem;}
+    #hero .text-area, #contact h1{font-size: 3.5rem;}
     #hero span{margin-left: 30px;}
     .box{height: 90px;  width: 170px;}
     .circle1{left: 16px;}
     .circle2{right: 12px;}
-    @keyframes slidein {
-      from {
-        left: 0%;
-      }
-      to {
-        left: 58%;
-      }
-    }
-    .wrapper h2{margin-top: 2rem;font-size: 1.5rem;}
+    @keyframes slidein {from {left: 0%;}to {left: 58%;}}
+    .wrapper h2, .wrapper1 h1{margin-top: 2rem;font-size: 1.5rem;}
     span{margin: 0;}
     #about, #products, #certifications, #biz {margin: 30% 0;}
     #about h1, #products h1, #certifications h1, #biz h1{font-size: 2.5rem;margin-bottom: 2.5rem;}
     #about h6{font-size: 1.1rem;  margin-bottom: 2rem;}
-    #about p, #clients p{font-size: 0.9rem;}
+    #about p, #clients p, .conDetails p, #footer p,.abtBox p, #goal p,
+    .chairmanMsg p, .maintabs p, .tab ol{font-size: 0.9rem;}
     .fa-3x{font-size: 33px;}
     #biz h2{font-size: 1.6rem;}
     #biz .row{padding: 20px;}
@@ -348,14 +502,32 @@ span{
     .card{margin: 10px 0;}
     .certCol{padding: 5%;}
     .testimonial{padding: 30px 10px;}
-    #footer{padding: 0;}
-    .footRow .col-md-1{text-align: left;}
-    .footRow span{margin-left: 20px;}
-    #footer li{margin: 15px 0;}
-    #footer ul{ margin: 30px 0;}
-    #footer .fa-1x{margin: 10px 15px 5px;}
     .owl-carousel{margin-top: 40px;}
+    .container{max-width: 100%;}
+    .conDetails{padding: 1rem 0.2rem;}
+    .conDetails .col-2, .col-10{padding: 0;}
+    .conDetails h2, .conDetails h4{margin-top: 2rem;font-size: 1.9rem;}
+    .addBox .icon {float: inherit;margin-top: 1.5rem;    font-size: 1rem;}
+    .conDetails .form-group{margin: 0; }
+    .conDetails .form-control, .footNav a{font-size: 0.8rem;}
+    .conDetails .btn-lg{line-height: 0.5; margin-top: 1rem;font-size: 0.8rem;}
+    #footer{padding: 0;}
+    #footer .navbar{padding: 0.5rem 0;}
+    .footNav a{font-weight: 500;}
+    .footLink {    margin: 0.5rem;}
+    .footLogo img{ height: 70px;}
+    #footer p{font-size: 0.8rem;}
+    #footer h5{font-size: 1.1rem;}
+    #footer .col-md-3 {padding: 0 3rem;}
+    .container__image{width: 300px; height: 300px; margin: 0 auto 40px;}
+    .container__image:hover {	 border-radius: 0;	 width: 350px;	 height: 350px;}
+    .maintabs label{padding: 0.2rem;}
+    .proImg{height: 118px; width: 118px;padding: 5px;}
+    .maintabs .tab h2{padding: 0; font-size: 1.8rem;}
+    .maintabs .tab p{padding: 1rem 5px;line-height: 1.5rem;}
+    .tab ol{ line-height: 1.4rem;}
   }
+
 
 
   @media(max-width:1024px) and (min-width:768px){
@@ -364,25 +536,33 @@ span{
     .box{height: 90px;  width: 170px;}
     .circle1{left: 16px;}
     .circle2{right: 12px;}
-    @keyframes slidein {
-      from {
-        left: 0%;
-      }
-      to {
-        left: 62%;
-      }
-    }
+    @keyframes slidein {from {left: 0%;}      to {left: 62%;}    }
     .wrapper h2{margin-top: 2rem;font-size: 1.3rem;}
     #about, #products, #certifications, #biz {margin: 15% 0;}
     #about h6 {      font-size: 1rem;      margin-bottom: 0.2rem;}
     #about p, #clients p, #certifications p,   .footRow span, #footer li{font-size: 0.9rem;}
     .certCol{padding: 3%;}
-    #footer{padding: 0;}
-    .footRow .col-md-1{text-align: left;}
-    #footer li{margin: 15px 0;}
-    #footer ul{ margin: 30px 0;}
-    #footer .fa-1x{margin: 10px 15px 5px;}
     .owl-carousel{margin-top: 40px;}
+    .wrapper1 h1{font-size: 2rem;}
+    #contact h1{ font-size: 4rem;}
+    .container{max-width: 100%;}
+    .container__image{width: 400px; height: 400px; margin: 0 auto 40px;}
+    .container__image:hover {	 border-radius: 0;	 width: 450px;	 height: 450px;}
+.tab ol{float: left;}
+.proImg{height: 230px;  width: 230px;  padding: 30px;}
+.maintabs label{padding: 0.2rem;}
+.maintabs .tab h2{padding: 0; font-size: 1.8rem;}
+.maintabs .tab p{padding: 1rem 5px;line-height: 1.5rem;}
+.tab ol{ line-height: 1.4rem;}
 
 
   }
+
+
+@media(min-width:1800px) and (max-width:2600px){
+  #footer{
+    position: inherit;
+    width: 100%;
+    bottom: 0;
+  }
+}
