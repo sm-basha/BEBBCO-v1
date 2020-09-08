@@ -427,7 +427,27 @@ margin: auto  ;
 .chairmanMsg h2{margin-bottom: 2rem;}
 .chairmanMsg img{ border-radius: 50%; margin: 2rem;}
 .chairmanMsg p{line-height: 2rem;}
-
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {transform:translateY(0)}
+	40% {transform:translateY(-30px)}
+	60% {transform:translateY(-15px)}
+}
+.jump {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite;
+  color: white;
+}
+.jump:hover {
+  cursor: pointer;
+  animation-name: bounce;
+  -moz-animation-name: bounce;
+}
 
 
 
