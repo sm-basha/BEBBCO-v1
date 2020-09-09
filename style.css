@@ -9,12 +9,13 @@
     font-family: 'Baloo Tammudu 2', cursive;
   }
 
-  h1,h2,h3,h4.h5{font-family: 'Merriweather Sans', sans-serif; font-weight: 600;}
+  h1,h2,h3,h4,h5, #hero .wrapper span{  color: #3588f3 !important;
+    font-family: 'Merriweather Sans', sans-serif; font-weight: 600;}
 
 
 body {
-  background: #0d4ea1;
-  color: #fff;
+  background: #eff3f7a6;
+  color: #495158;
 }
 
 .containerAnimate {
@@ -23,21 +24,21 @@ body {
 .container{max-width: 65%;}
 .row{margin: 0;}
 /* NAVBAR */
-nav{background-color: #0d4ea1;}
+nav{background-color: #3a3f44;}
 nav img{ margin: 1%;}
 .nav-item{margin: 0 1rem;}
 
 /* HERO */
 #hero img{height: 80vh; width: 100%;}
 
-#hero {
+/* #hero {
     background-color: rgb(9,75,142,0.9);
-  }
+  } */
   .flash{
     animation:  2500ms infinite;
 }
-/* .wrapper{color: #fff;} */
-.wrapper h2{margin-top: 3rem; color:#A56B20}
+.wrapper{ padding: 3%;}
+.wrapper h2{margin-top: 3rem;}
   .text-area{
     font-size: 4rem;
     font-weight: bold;
@@ -51,36 +52,26 @@ nav img{ margin: 1%;}
     display:inline-block;
     margin-left: 35px;
   }
-  .text-area span:nth-of-type(2){
-    animation-delay: .1s;
-  }.text-area span:nth-of-type(3){
-    animation-delay: .2s;
-  }.text-area span:nth-of-type(4){
-    animation-delay: .3s;
-  }.text-area span:nth-of-type(5){
-    animation-delay: .4s;
-  }.text-area span:nth-of-type(6){
-    animation-delay: .5s;
-  }
+  .text-area span:nth-of-type(2){ animation-delay: .1s;  }
+  .text-area span:nth-of-type(3){ animation-delay: .2s;  }
+  .text-area span:nth-of-type(4){ animation-delay: .3s;  }
+  .text-area span:nth-of-type(5){ animation-delay: .4s;  }
+  .text-area span:nth-of-type(6){ animation-delay: .5s;  }
 
   @keyframes animate{
     60%{
       transform:translate(20px, 0 scale(1));
-      color: #fff;
-    }
+      color: #495158;    }
     80%{
       transform:translate(20px, 0 scale(1));
-      color: #fff;
-    }
+      color: #495158;    }
     90%{
       transform:translate(0) scale(1.2);
-      color: #BD861F;
-    }
+      color: #BD861F;    }
     100%{
       transform:translate(0) scale(1);
-      color: #fff;
-      opacity: 1;
-    }
+      color: #495158;
+      opacity: 1;    }
   }
 
   hr {
@@ -142,7 +133,7 @@ nav img{ margin: 1%;}
 
 /* ABOUT US */
 #about, #products, #certifications, #biz{    margin: 7%;}
-#about h1, #products h1, #certifications h1, #biz h1{margin-bottom: 3.5rem;}
+#about h1, #products h1, #certifications h1, #biz h1, #clients h1{margin-bottom: 5rem;}
 
 
 /* OUR BUSINESES */
@@ -151,6 +142,9 @@ nav img{ margin: 1%;}
 .card {
 margin: auto  ;
   background: #000;
+  border: none;
+  box-shadow: rgb(13,78,161, 0.7) 0px 5px 23px 0px;
+  border-radius: 2rem;
 }
 .card .carousel-caption{
   top: 10px;
@@ -161,6 +155,7 @@ margin: auto  ;
   width: 100%;
   height: 100%;
   overflow: hidden;
+  border-radius: 1.8rem;
 }
 .card .image h2, .card .center h2{color: #3683d2;}
 .card .image img {
@@ -178,10 +173,12 @@ margin: auto  ;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgb(255, 255,255,0.6);
+  background: rgb(0, 0,0,0.4);
   transition: .5s;
   transform-origin: left;
   transform: perspective(2000px) rotateY(-90deg);
+  z-index: 10;
+  border-radius: 1.9rem;
 }
 
 .card:hover .details {
@@ -206,7 +203,7 @@ margin: auto  ;
 .card .details .center p {
   margin: 10px 0;
   padding: 0;
-  color:#fff;
+  color:#dee4e8;
   font-weight: 600;
 }
 .card .details .center a:hover{
@@ -221,30 +218,39 @@ margin: auto  ;
     margin: 2rem;
     animation-iteration-count: infinite;
 }
+#certifications .row{margin-top: 3%;}
+#certifications img{border-radius: 20px;}
 
 /* CLIENTS */
 #clients {
     display: block;
     position: relative;
-    color: #fff;
+    color: #dee4e8;
     padding: 5%;
     margin: 7% 0;
+    background-image: url(images/car1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* opacity: 0.1; */
+    
   }
-  #clients::after {
+  /* #clients::after {
     content: "";
-    background-image: url(images/pexels-daniel-absi-952670.jpg);
-    opacity: 0.9;
+
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
     position: absolute;
     z-index: -1;
-  }
+  } */
 
 #clients img{
     height: 100px;
     width: 100px;
+    border-radius: 20px;
 }
 
 .testimonial{
@@ -253,7 +259,7 @@ margin: auto  ;
     background-position: center bottom;
     padding: 117px;
     margin-top: 3rem;
-    color: #fff;
+    color: #dee4e8;
     border-radius: 1.5rem;
 }
 
@@ -270,7 +276,7 @@ margin: auto  ;
   font-weight: 700;
   font-size: 1.2rem;
 }
-.footNav a:hover{ color: #fff;}
+.footNav a:hover{ color: #495158;}
 .footLink{  margin: 0 2rem;}
 .footLogo{
   width: max-content;
@@ -281,7 +287,7 @@ margin: auto  ;
   width: 43px;
   height: 43px;
   font-size: 18px;
-  line-height: 2.5;
+  line-height: 3;
   text-align: center;
   display: inline-block;
   color: #fff;
@@ -308,12 +314,11 @@ margin: auto  ;
 #contact h1{
   font-size: 6rem;
   text-align: center;
-  opacity: 0.4;
 }
 
 .conDetails{
-  background-color:rgb(255,255,255,0.1);
-   padding: 2rem;
+  background-color: rgb(0,0,0,0.1);
+  padding: 2rem;
    border-radius: 0.7rem;
   }
 .addBox .icon{
@@ -345,11 +350,11 @@ margin: auto  ;
   margin-bottom: 0;
   /* order: 2; */
 }
-.tab{border-radius: 1rem;}
+.tab{border-radius: 0.5rem 0.5rem 1rem 1rem;}
 .maintabs .tab{
   width: 100%;
   padding: 20px;
-  background-color:rgb(255,255,255,0.5);
+  background-color:rgb(0,0,0,0.1);
   order: 1;
   display: none;
 }
@@ -366,13 +371,14 @@ margin: auto  ;
   display: block;
 }
 .maintabs input[type='radio']:checked + label{
-  background-color:rgb(255,255,255,0.5);
+  background-color:rgb(0,0,0,0.1);
   border-top-left-radius: 1.2rem;
   border-top-right-radius: 1.2rem;
 }
 .proImg{
   height: 400px;
   width: 400px;
+  border-radius: 1.2rem;
 }
 
 /* ABOUT US */
@@ -432,34 +438,18 @@ margin: auto  ;
   transform: translateY(-20px);
   transition: 0.8s;
 }
-#goal p{line-height: 2rem ;}
+#goal p{line-height: 2rem ;padding: 15% 0;}
 
 .chairmanMsg{text-align: center; padding: 5rem 0;}
 .chairmanMsg h2{margin-bottom: 2rem;}
-.chairmanMsg img{ border-radius: 50%; margin: 2rem;}
+.chairmanMsg img{ border-radius: 50%; margin: 2rem;
+  box-shadow: rgb(13,78,161, 0.7) 0px 5px 23px 0px;}
 .chairmanMsg p{line-height: 2rem;}
 @keyframes bounce {
   0%, 100%, 20%, 50%, 80% {transform:translateY(0)}
 	40% {transform:translateY(-30px)}
 	60% {transform:translateY(-15px)}
 }
-.jump {
-  -webkit-animation-duration: 2s;
-  animation-duration: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-  color: white;
-}
-.jump:hover {
-  cursor: pointer;
-  animation-name: bounce;
-  -moz-animation-name: bounce;
-}
-
 
 
 
@@ -519,6 +509,7 @@ margin: auto  ;
     *{text-align: center;}
     #hero .text-area, #contact h1{font-size: 3.5rem;}
     #hero span{margin-left: 30px;}
+    .wrapper{ padding: 2%;}
     .box{height: 90px;  width: 170px;}
     .circle1{left: 16px;}
     .circle2{right: 12px;}
@@ -578,11 +569,12 @@ margin: auto  ;
     #about p, #clients p, #certifications p,   .footRow span, #footer li{font-size: 0.9rem;}
     .certCol{padding: 3%;}
     .owl-carousel{margin-top: 40px;}
+    .wrapper{ padding: 2%;}
     .wrapper1 h1{font-size: 2rem;}
     #contact h1{ font-size: 4rem;}
     .container{max-width: 100%;}
-    .container__image{width: 400px; height: 400px; margin: 0 auto 40px;}
-    .container__image:hover {	 border-radius: 0;	 width: 450px;	 height: 450px;}
+    .container__image{width: 350px; height: 350px; margin: 0 auto 40px;}
+    .container__image:hover {	 border-radius: 0;	 width: 375px;	 height: 375px;}
 .tab ol{float: left;}
 .proImg{height: 230px;  width: 230px;  padding: 30px;}
 .maintabs label{padding: 0.2rem;}
@@ -601,3 +593,15 @@ margin: auto  ;
     bottom: 0;
   }
 }
+
+
+.aniFadeIn,.aniFadeInLeft,.aniSlideInUp,#biz h1,.card1, .card2, .card3,
+#certifications h1, #certifications p,#clients h1,#clients p,
+.vision img, .mission img
+{  opacity: 0;}
+
+.aniFadeIn.animated,.aniFadeInLeft.animated,.aniSlideInUp.animated,
+#biz h1.animated,.card1.animated,.card2.animated, .card3.animated,
+#certifications h1.animated, #certifications p.animated, #clients h1.animated,
+#clients p.animated, .vision img.animated, .mission img.animated
+{  opacity: 1;}
